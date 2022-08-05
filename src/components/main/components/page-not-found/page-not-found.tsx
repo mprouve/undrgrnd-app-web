@@ -8,7 +8,7 @@ import {
 } from "./styled-components/page-not-found"
 import "./scss/glitch-1.scss"
 
-const PageNotFound = () => {
+const PageNotFound = (): JSX.Element => {
   const navigate = useNavigate()
 
   const handleClickReturn = (): void => {

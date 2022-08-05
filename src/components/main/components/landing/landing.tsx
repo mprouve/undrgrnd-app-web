@@ -1,7 +1,12 @@
-import { MainContainer, Name, SecondaryName, PrimaryName } from './styled-components/landing'
-import './scss/glitch-1.scss'
+import {
+  MainContainer,
+  Name,
+  SecondaryName,
+  PrimaryName,
+} from "./styled-components/landing"
+import "./scss/glitch-1.scss"
 
-const Landing = () => {
+const Landing = (): JSX.Element => {
   return (
     <MainContainer>
       <Name>

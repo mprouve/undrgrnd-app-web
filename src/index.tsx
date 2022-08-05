@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client"
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom"
 import { GlobalStyles } from "./res/global-styles"
 import AppLoadingContextProvider from "./components/context-providers/app-loading/app-loading.js"
 import App from "./components/app"
