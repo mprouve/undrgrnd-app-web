@@ -8,7 +8,7 @@ type Props = {
 // Props:
 // children --> (Child JSX Elements)
 const AppLoadingContextProvider = ({ children }: Props) => {
-  const [appLoading, setAppLoading] = useState(true)
+  const [appLoading, setAppLoading] = useState(false)
 
   return <Context.Provider value={{ appLoading, setAppLoading }}>{children}</Context.Provider>
 }

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from "styled-components"
 
 export const MainContainer = styled.div`
   background-color: #000;
@@ -66,7 +66,6 @@ export const PrimaryName = styled.h1`
   font-size: 15rem;
   line-height: 15rem;
   color: white;
-  // text-shadow: #ffffff33 0 0 70px;
   position: relative;
 
   @media (max-width: 1300px) {

@@ -1,10 +1,13 @@
-import Landing from './components/landing/landing'
+import { Routes, Route } from "react-router-dom"
+import Landing from "./components/landing/landing"
+import PageNotFound from "./components/page-not-found/page-not-found"
 
 const Main = () => {
   return (
-    <>
-      <Landing />
-    </>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
   )
 }
 

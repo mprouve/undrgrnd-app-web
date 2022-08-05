@@ -1,27 +1,30 @@
-import ReactDOM from 'react-dom/client'
-import { GlobalStyles } from './res/global-styles'
-import AppLoadingContextProvider from './components/context-providers/app-loading/app-loading.js'
-import App from './components/app'
+import ReactDOM from "react-dom/client"
+import { BrowserRouter } from "react-router-dom";
+import { GlobalStyles } from "./res/global-styles"
+import AppLoadingContextProvider from "./components/context-providers/app-loading/app-loading.js"
+import App from "./components/app"
+import config from "./config"
 // import reportWebVitals from './report-web-vitals'
-import config from './config'
 
-config.debug && console.log('[VITE_NODE_ENV]: ', import.meta.env.VITE_NODE_ENV)
+config.debug && console.log("[VITE_NODE_ENV]: ", import.meta.env.VITE_NODE_ENV)
 config.debug
   ? import.meta.env.PROD
-    ? console.log('[ENVIRONMENT]: production')
-    : console.log('[ENVIRONMENT]: development')
+    ? console.log("[ENVIRONMENT]: production")
+    : console.log("[ENVIRONMENT]: development")
   : null
-config.debug && console.log('[MODE]: ', import.meta.env.MODE)
-config.debug && console.log('[BASE_URL]: ', import.meta.env.BASE_URL)
-config.debug && console.log('[IS_SSR]: ', import.meta.env.SSR)
+config.debug && console.log("[MODE]: ", import.meta.env.MODE)
+config.debug && console.log("[BASE_URL]: ", import.meta.env.BASE_URL)
+config.debug && console.log("[IS_SSR]: ", import.meta.env.SSR)
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 
 root.render(
-  <AppLoadingContextProvider>
-    <GlobalStyles />
-    <App />
-  </AppLoadingContextProvider>
+  <BrowserRouter>
+    <AppLoadingContextProvider>
+      <GlobalStyles />
+      <App />
+    </AppLoadingContextProvider>
+  </BrowserRouter>
 )
 
 // If you want to start measuring performance in your app, pass a function

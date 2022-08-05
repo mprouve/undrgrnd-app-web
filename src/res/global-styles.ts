@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import theme from './theme'
+import { createGlobalStyle } from "styled-components"
+import theme from "./theme"
 
 // export const lightTheme = {
 //   body: "#fffff",
@@ -112,7 +112,7 @@ export const GlobalStyles = createGlobalStyle`
 
     html,
     body {
-        ${'' /* user-select: none; */}
+        ${"" /* user-select: none; */}
         height: 100%;
         width: 100%;
         padding: 0;
@@ -146,7 +146,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     ${
-      '' /* body::-webkit-scrollbar {
+      "" /* body::-webkit-scrollbar {
         display: none;
     } */
     }
