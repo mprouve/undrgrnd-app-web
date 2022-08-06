@@ -4,7 +4,7 @@ export const MainContainer = styled.div`
   background-color: #000;
   display: block;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
 `
 

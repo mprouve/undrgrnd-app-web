@@ -111,7 +111,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     html,
-    body {
+    body,
+    #root {
         ${"" /* user-select: none; */}
         height: 100%;
         width: 100%;
