@@ -1,6 +1,6 @@
 {
   "name": "undrgrnd-app-web",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "undrgrnd-app-web is the primary web application for THE UNDRGRND - A community-driven network for skating competition and bragging rights.",
   "private": true,
   "type": "module",
