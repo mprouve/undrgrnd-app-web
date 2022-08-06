@@ -2,6 +2,16 @@ import styled from "styled-components"
 
 export const MainContainer = styled.div`
   background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+`
+
+export const TransparentOverlay = styled.div`
+  background-color: #000000aa;
   display: block;
   width: 100%;
   height: 100%;
