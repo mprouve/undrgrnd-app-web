@@ -7,7 +7,7 @@ import {
   ReturnContainer,
   ReturnButton,
 } from "./styled-components/page-not-found"
-// import "./scss/glitch-1.scss"
+import "./scss/glitch-2.scss"
 
 const PageNotFound = (): JSX.Element => {
   const navigate = useNavigate()
@@ -18,9 +18,17 @@ const PageNotFound = (): JSX.Element => {
 
   return (
     <MainContainer
-      style={{
-        backgroundImage: `url(https://res.cloudinary.com/marco-prouve/image/upload/v1659817984/undrgrnd/backgrounds/graffiti-bw_hdrsl9.webp)`,
-      }}>
+      className="glitch-404"
+      // style={{
+      //   backgroundImage: `url(https://res.cloudinary.com/marco-prouve/image/upload/v1659817984/undrgrnd/backgrounds/graffiti-bw_hdrsl9.webp)`,
+      // }}
+    >
+      <div className="glitch-item-404" />
+      <div className="glitch-item-404" />
+      <div className="glitch-item-404" />
+      <div className="glitch-item-404" />
+      <div className="glitch-item-404" />
+
       <TransparentOverlay>
         <TextContainer>
           <Text className="glitch-404" data-text="404">

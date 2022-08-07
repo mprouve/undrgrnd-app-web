@@ -1,11 +1,6 @@
 :root {
-  --color-text: #fff;
-  --color-bg: #000;
-  --color-link: #f9d77e;
-  --color-link-hover: #fff;
-  --color-info: #efc453;
-  --glitch-width: 100vw;
-  --glitch-height: 100vh;
+  --glitch-width: 100%;
+  --glitch-height: 100%;
   --gap-horizontal: 10px;
   --gap-vertical: 5px;
   --time-anim: 4s;
@@ -22,26 +17,8 @@
   --blend-color-5: #af4949;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #1d1e22;
-  margin: 0;
-  padding: 0;
-}
-
-.glitch {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-
-  .glitch__item {
+.glitch-landing {
+  .glitch-item-landing {
     background: url("https://res.cloudinary.com/marco-prouve/image/upload/v1659817984/undrgrnd/backgrounds/graffiti-bw_hdrsl9.webp")
       no-repeat 50% 50% / cover;
     height: 100%;
@@ -51,7 +28,7 @@ body {
     position: absolute;
   }
 
-  .glitch__item:nth-child(n + 2) {
+  .glitch-item-landing:nth-child(n + 2) {
     opacity: 0;
     animation-duration: var(--time-anim);
     animation-delay: var(--delay-anim);
@@ -59,25 +36,25 @@ body {
     animation-iteration-count: infinite;
   }
 
-  .glitch__item:nth-child(2) {
+  .glitch-item-landing:nth-child(2) {
     background-color: var(--blend-color-2);
     background-blend-mode: var(--blend-mode-2);
     animation-name: glitch-anim-2;
   }
 
-  .glitch__item:nth-child(2) {
+  .glitch-item-landing:nth-child(2) {
     background-color: var(--blend-color-3);
     background-blend-mode: var(--blend-mode-3);
     animation-name: glitch-anim-3;
   }
 
-  .glitch__item:nth-child(4) {
+  .glitch-item-landing:nth-child(4) {
     background-color: var(--blend-color-4);
     background-blend-mode: var(--blend-mode-4);
     animation-name: glitch-anim-4;
   }
 
-  .glitch__item:nth-child(5) {
+  .glitch-item-landing:nth-child(5) {
     background-color: var(--blend-color-5);
     background-blend-mode: var(--blend-mode-5);
     animation-name: glitch-anim-flash;

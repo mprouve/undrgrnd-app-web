@@ -11,16 +11,16 @@ import "./scss/glitch-2.scss"
 const Landing = (): JSX.Element => {
   return (
     <MainContainer
-      className="glitch"
+      className="glitch-landing"
       // style={{
       //   backgroundImage: `url(https://res.cloudinary.com/marco-prouve/image/upload/v1659817984/undrgrnd/backgrounds/graffiti-bw_hdrsl9.webp)`,
       // }}
     >
-      <div className="glitch__item" />
-      <div className="glitch__item" />
-      <div className="glitch__item" />
-      <div className="glitch__item" />
-      <div className="glitch__item" />
+      <div className="glitch-item-landing" />
+      <div className="glitch-item-landing" />
+      <div className="glitch-item-landing" />
+      <div className="glitch-item-landing" />
+      <div className="glitch-item-landing" />
 
       <TransparentOverlay>
         <LogoImg
