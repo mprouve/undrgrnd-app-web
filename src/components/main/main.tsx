@@ -1,6 +1,6 @@
-import { Routes, Route } from "react-router-dom"
-import Landing from "./components/landing/landing"
-import PageNotFound from "./components/page-not-found/page-not-found"
+import { Routes, Route } from 'react-router-dom'
+import Landing from './components/landing/landing'
+import PageNotFound from './components/page-not-found/page-not-found'
 
 const Main = (): JSX.Element => {
   return (

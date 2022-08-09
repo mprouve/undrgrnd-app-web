@@ -1,12 +1,12 @@
 import {
   MainContainer,
   TransparentOverlay,
-  LogoImg,
+  LogoImg
   // Name,
   // SecondaryName,
   // PrimaryName,
-} from "./styled-components/landing"
-import "./scss/glitch-2.scss"
+} from './styled-components/landing'
+import './scss/glitch-2.scss'
 
 const Landing = (): JSX.Element => {
   return (

@@ -19,7 +19,7 @@
 
 .glitch-landing {
   .glitch-item-landing {
-    background: url("https://res.cloudinary.com/marco-prouve/image/upload/v1659817984/undrgrnd/backgrounds/graffiti-bw_hdrsl9.webp")
+    background: url('https://res.cloudinary.com/marco-prouve/image/upload/v1659817984/undrgrnd/backgrounds/graffiti-bw_hdrsl9.webp')
       no-repeat 50% 50% / cover;
     height: 100%;
     width: 100%;
@@ -63,11 +63,7 @@
       0%,
       5% {
         opacity: 0.2;
-        transform: translate3d(
-          var(--glitch-horizontal),
-          var(--glitch-height),
-          0
-        );
+        transform: translate3d(var(--glitch-horizontal), var(--glitch-height), 0);
       }
       5.5%,
       100% {
@@ -201,8 +197,7 @@
 @keyframes glitch-anim-4 {
   0% {
     opacity: 1;
-    transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0)
-      scale3d(-1, -1, 1);
+    transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1, -1, 1);
     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
     clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
   }
@@ -280,8 +275,7 @@
   }
   21.9% {
     opacity: 1;
-    transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0)
-      scale3d(-1, -1, 1);
+    transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1, -1, 1);
   }
   22%,
   100% {

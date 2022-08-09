@@ -1,56 +1,142 @@
 import fontFamily from './fonts'
 
-const theme = {
-  typography: {
-    fontFamily: fontFamily,
+// theme.ts
+import { DefaultTheme, Palette, Typography, Layout } from 'styled-components'
+
+// TYPES
+declare module 'styled-components' {
+  export interface Palette {
+    primary: string
+    secondary: string
+    tertiary: string
+    white: string
+    black: string
+  }
+
+  export interface Typography {
+    fontFamily: string
     fontSizes: {
-      smaller: '0.75rem', // 12px
-      small: '0.875rem', // 14px
-      short: '0.9375rem', // 15px
-      regular: '1rem', // 16px
-      tall: '1.0625rem', // 17px
-      medium: '1.125rem', // 18px
-      large: '1.1875rem', // 19px
-      larger: '1.25rem', // 20px
-      extraLarge: '1.35rem' // just short of...22px
-    },
+      small: string
+      short: string
+      regular: string
+      tall: string
+      large: string
+      larger: string
+      extraLarge: string
+    }
     fontWeight: {
-      light: 300,
-      regular: 400,
-      medium: 500,
-      semiBold: 600,
+      extraLight: 200
+      light: 300
+      normal: 400
+      heavy: 500
+      extraHeavy: 600
       bold: 700
     }
-  },
-  palette: {
-    fontColor: {
-      dark: {
-        primary: '#000',
-        secondary: '#333'
-      },
-      light: {
-        primary: '#fff',
-        secondary: '#eee'
-      },
+  }
+
+  export interface Colors {
+    text: {
+      body: string
+      heading: string
+      subheading: string
       link: {
-        primary: '#4063AF',
-        secondary: '#555'
+        standard: string
+        visited: string
+        active: string
       }
-    },
-    primary: {
-      main: '#edb801',
-      light: '#fed234' // use for hover state // gold
-    },
-    secondary: {
-      main: '#6e8c76', // dark olive
-      light: '#abcab3' // light olive
-    },
-    common: {
-      white: '#ffffff',
-      black: '#000000'
     }
-  },
-  borderRadius: '.2rem'
+    background: {
+      primary: string
+      secondary: string
+    }
+  }
+
+  export interface Layout {
+    borderRadius: string
+  }
+
+  export interface DefaultTheme {
+    palette: Palette
+    typography: Typography
+    colors: Colors
+    layout: Layout
+  }
 }
 
-export default theme
+// EXPORTS
+export const palette: Palette = {
+  primary: '#000000',
+  secondary: '#000000',
+  tertiary: '#000000',
+  white: '#ffffff',
+  black: '#000000'
+}
+
+export const typography: Typography = {
+  fontFamily,
+  fontSizes: {
+    small: '0.9rem',
+    short: '0.95rem',
+    regular: '1rem',
+    tall: '1.05rem',
+    large: '1.1rem',
+    larger: '1.2rem',
+    extraLarge: '1.4rem'
+  },
+  fontWeight: {
+    extraLight: 200,
+    light: 300,
+    normal: 400,
+    heavy: 500,
+    extraHeavy: 600,
+    bold: 700
+  }
+}
+
+export const layout: Layout = {
+  borderRadius: '.3rem'
+}
+
+export const lightTheme: DefaultTheme = {
+  palette,
+  typography,
+  colors: {
+    text: {
+      body: '#333333',
+      heading: '#333333',
+      subheading: '#777777',
+      link: {
+        standard: '#0000EE',
+        visited: '#551A8B',
+        active: '#EE0000'
+      }
+    },
+    background: {
+      primary: '#ffffff',
+      secondary: '#f8f8f8'
+    }
+  },
+  layout
+}
+
+export const darkTheme: DefaultTheme = {
+  palette,
+  typography,
+  colors: {
+    text: {
+      body: '#eeeeee',
+      heading: '#eeeeee',
+      subheading: '#cccccc',
+      link: {
+        standard: '#0000EE',
+        visited: '#551A8B',
+        active: '#EE0000'
+      }
+    },
+    background: {
+      primary: '#000000',
+      secondary: '#080808'
+    }
+  },
+  layout
+}

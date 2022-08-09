@@ -1,4 +1,5 @@
 import { ReportHandler } from 'web-vitals'
+import { logger } from './util/classes/console-logger'
 
 const reportWebVitals = (onPerfEntry: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
@@ -11,7 +12,7 @@ const reportWebVitals = (onPerfEntry: ReportHandler) => {
         getTTFB(onPerfEntry)
       })
       .catch((e) => {
-        console.log(e)
+        logger.log(e)
       })
   }
 }

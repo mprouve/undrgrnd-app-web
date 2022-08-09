@@ -6,29 +6,34 @@ if (
   typeof import.meta.env.VITE_NODE_ENV === 'undefined'
 ) {
   env = 'local'
-} else {
+} else if (import.meta.env.VITE_NODE_ENV === 'production') {
   env = 'production'
+} else {
+  env = 'local'
 }
 
-type EnvironmentInterface = {
+type EnvironmentType = {
   debug: boolean
+  logLevel: 'warn' | 'log'
 }
 
 // ****************************************
 // PRODUCTION *****************************
 // ****************************************
-const production: EnvironmentInterface = {
-  debug: false
+const production: EnvironmentType = {
+  debug: false,
+  logLevel: 'warn'
 }
 
 // ****************************************
 // LOCAL **********************************
 // ****************************************
-const local: EnvironmentInterface = {
-  debug: true
+const local: EnvironmentType = {
+  debug: true,
+  logLevel: 'log'
 }
 
-const config = <EnvironmentInterface>{
+const config = <EnvironmentType>{
   production,
   local
 }[env]

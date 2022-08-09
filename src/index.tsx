@@ -1,29 +1,34 @@
-import ReactDOM from "react-dom/client"
-import { BrowserRouter } from "react-router-dom"
-import { GlobalStyles } from "./res/global-styles"
-import AppLoadingContextProvider from "./components/context-providers/app-loading/app-loading.js"
-import App from "./components/app"
-import config from "./config"
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import { logger } from './util/classes/console-logger'
+import ThemeContextProvider from './components/context-providers/theme/theme'
+import AppLoadingContextProvider from './components/context-providers/app-loading/app-loading'
+import App from './components/app'
+import config from './config'
 // import reportWebVitals from './report-web-vitals'
 
-config.debug && console.log("[VITE_NODE_ENV]: ", import.meta.env.VITE_NODE_ENV)
-config.debug
-  ? import.meta.env.PROD
-    ? console.log("[ENVIRONMENT]: production")
-    : console.log("[ENVIRONMENT]: development")
-  : null
-config.debug && console.log("[MODE]: ", import.meta.env.MODE)
-config.debug && console.log("[BASE_URL]: ", import.meta.env.BASE_URL)
-config.debug && console.log("[IS_SSR]: ", import.meta.env.SSR)
+if (config.debug) {
+  if (import.meta.env.PROD) {
+    logger.log('[ENVIRONMENT]: production')
+  } else {
+    logger.log('[ENVIRONMENT]: development')
+  }
 
-const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
+  logger.log('[VITE_NODE_ENV]: ', import.meta.env.VITE_NODE_ENV)
+  logger.log('[MODE]: ', import.meta.env.MODE)
+  logger.log('[BASE_URL]: ', import.meta.env.BASE_URL)
+  logger.log('[IS_SSR]: ', import.meta.env.SSR)
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
   <BrowserRouter>
-    <AppLoadingContextProvider>
-      <GlobalStyles />
-      <App />
-    </AppLoadingContextProvider>
+    <ThemeContextProvider>
+      <AppLoadingContextProvider>
+        <App />
+      </AppLoadingContextProvider>
+    </ThemeContextProvider>
   </BrowserRouter>
 )
 

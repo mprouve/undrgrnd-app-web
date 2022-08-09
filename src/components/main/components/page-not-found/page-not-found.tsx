@@ -1,19 +1,19 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
 import {
   MainContainer,
   TransparentOverlay,
   TextContainer,
   Text,
   ReturnContainer,
-  ReturnButton,
-} from "./styled-components/page-not-found"
-import "./scss/glitch-2.scss"
+  ReturnButton
+} from './styled-components/page-not-found'
+import './scss/glitch-2.scss'
 
 const PageNotFound = (): JSX.Element => {
   const navigate = useNavigate()
 
   const handleClickReturn = (): void => {
-    navigate("/")
+    navigate('/')
   }
 
   return (

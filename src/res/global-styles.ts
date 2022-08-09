@@ -1,18 +1,4 @@
-import { createGlobalStyle } from "styled-components"
-import theme from "./theme"
-
-// export const lightTheme = {
-//   body: "#fffff",
-//   main: "#5C14DB",
-//   mainColor: "#FFFFFF",
-//   accent: "#E5DE17",
-//   accentColor: "#161616",
-//   secondary: "#FFFFFF",
-//   secondaryColor: "#343434",
-//   dullColor: "#343434",
-//   ternary: "#000000",
-//   codeColor: "#D121C5",
-// }
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
     html,
@@ -104,7 +90,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background-color: #000000;
+        background-color: ${({ theme }) => theme.colors.background};
         font-size: 62.5%;   /* Will make 1em = 10px */
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -113,12 +99,12 @@ export const GlobalStyles = createGlobalStyle`
     html,
     body,
     #root {
-        ${"" /* user-select: none; */}
+        ${'' /* user-select: none; */}
         height: 100%;
         width: 100%;
         padding: 0;
         margin: 0;
-        font-family: ${theme.typography.fontFamily};
+        font-family: ${({ theme }) => theme.typography.fontFamily};
     }
     
     code {
@@ -131,7 +117,7 @@ export const GlobalStyles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-weight: normal;
+        font-weight: ${({ theme }) => theme.typography.fontWeight.normal};
     }
 
     * {
@@ -141,14 +127,16 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     a {
-        color: inherit;
+        color: ${({ theme }) => theme.colors.text.link.standard};
         text-decoration: none;
-        outline : none ;
+        outline : none;
     }
 
-    ${
-      "" /* body::-webkit-scrollbar {
-        display: none;
-    } */
+    a:visited {
+        color: ${({ theme }) => theme.colors.text.link.visited};
+    }
+
+    a:active {
+        color: ${({ theme }) => theme.colors.text.link.active};
     }
 `

@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const MainContainer = styled.div`
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.background.primary};
   // background-repeat: no-repeat;
   // background-position: center;
   // background-size: cover;
